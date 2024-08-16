@@ -130,7 +130,7 @@ const Product = () => {
             <p className="text-[18px] font-bold">Br{data?.price}</p>
             <div>
               <button className="w-[32px] border text-[18px] rounded">-</button>
-              <button className="w-[50px]">0</button>
+              <button className="w-[50px]">1</button>
               <button className="w-[32px] border text-[18px] rounded">+</button>
             </div>
           </div>
