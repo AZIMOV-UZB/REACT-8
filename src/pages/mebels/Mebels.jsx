@@ -1,6 +1,5 @@
 import React from "react";
 import rasm from "../../assets/Rectangle 66.png";
-import rasm1 from "../../assets/Rectangle 67.png";
 import rasm2 from "../../assets/Rectangle 68.png";
 import rasm3 from "../../assets/Rectangle 69.png";
 const list = [

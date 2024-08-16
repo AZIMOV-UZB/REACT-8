@@ -4,7 +4,7 @@ import { useLocation, useParams } from "react-router-dom";
 import { IoStarOutline } from "react-icons/io5";
 import { LiaCartPlusSolid } from "react-icons/lia";
 import { IoBarChartOutline } from "react-icons/io5";
-import { IoArrowRedo } from "react-icons/io5";
+import { IoIosArrowForward } from "react-icons/io";
 const API_URL = "https://dummyjson.com";
 const Product = () => {
   const { id } = useParams();
@@ -70,7 +70,7 @@ const Product = () => {
       <button className=" button w-12 border rounded-full bg-emerald-300 p-1 text-xs text-slate-100">
         New
       </button>
-      <button className="btr w-9 h-9 rounded-full border-none bg-yellow-400 ">
+      <button className="btr w-5 h-5 rounded-full border-none bg-yellow-400 ">
         <LiaCartPlusSolid className="text-slate-100 text-2xl m-auto" />
       </button>
       <div className="ofset flex ">
@@ -107,15 +107,15 @@ const Product = () => {
           <img
             className="w-[200px] m-auto mb-4 object-contain"
             src={data?.images[0]}
-            alt=""
+            alt="foto"
           />
           <div className="flex">
             {data?.images?.map((item, inx) => (
               <img
-                className="w-[80px] h-[80px] object-contain m-auto"
+                className="w-[60px] h-[60px] object-contain m-auto"
                 src={item}
                 key={inx}
-                alt=""
+                alt="foto"
               />
             ))}
           </div>
@@ -135,14 +135,14 @@ const Product = () => {
             </div>
           </div>
           <div className="flex gap-5">
-            <button className="lg:py-[16px] bg-[#ff8a1e] cursor-pointer rounded-[32px] text-[#fff] lg:px-[98px] border py-[5px] px-[40px]">
+            <button className="lg:py-[16px] bg-[#ff8a1e] cursor-pointer rounded-[32px] text-[#fff] lg:px-[80px] border py-[5px] px-[20px]">
               Добаить в корзину +
             </button>
             <button className="border px-3 rounded-full">
               <IoStarOutline className=" lg:text-[30px]" />
             </button>
             <button className="border px-3 rounded-full">
-              <IoBarChartOutline className="lg:text-[30px]" />
+              <IoBarChartOutline className="lg:text-[20px]" />
             </button>
           </div>
           <p>{data?.description}</p>
@@ -150,15 +150,14 @@ const Product = () => {
           <div className="flex justify-between">
             <p className="font-[600]">{data?.sku}</p>
             <p>
-              <IoArrowRedo />
+            <IoIosArrowForward />
             </p>
           </div>
           <hr />
           <div className="flex justify-between">
             <p className="font-[600]">{data?.rating}%</p>
             <p>
-              <IoArrowRedo />
-            </p>
+            <IoIosArrowForward />            </p>
           </div>
           <hr />
         </div>
