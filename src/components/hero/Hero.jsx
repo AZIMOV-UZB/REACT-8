@@ -1,4 +1,4 @@
-import React from 'react'
+import React , {memo} from 'react'
 import "./hero.css"
 import herologo from "../../assets/image 34.png"
 const Hero = () => {
@@ -28,4 +28,4 @@ const Hero = () => {
     )
 }
 
-export default Hero
+export default memo(Hero)

@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{memo} from "react";
 import divan from "../../assets/divan.png";
 import divan1 from "../../assets/rasm1.png";
 import divan2 from "../../assets/rasm3.png";
@@ -88,4 +88,4 @@ const Kategorey = () => {
   );
 };
 
-export default Kategorey;
+export default memo(Kategorey);

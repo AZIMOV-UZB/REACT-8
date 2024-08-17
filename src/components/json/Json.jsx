@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,memo } from "react";
 import "./json.css";
 import { LiaCartPlusSolid } from "react-icons/lia";
-import axios from "axios";
-import { data } from "autoprefixer";
+import axios from "../../api";
 import { Link } from "react-router-dom";
-const API_URL = "https://dummyjson.com";
 const Json = () => {
   const [products, setProducts] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -14,7 +12,7 @@ const Json = () => {
   const [total, setTotal] = useState(0);
   useEffect(() => {
     axios
-      .get(`${API_URL}/products/category-list`)
+      .get(`/products/category-list`)
       .then((res) => setCategorey(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -23,7 +21,7 @@ const Json = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`${API_URL}/products${selectCategory}`, {
+      .get(`/products${selectCategory}`, {
         params: {
           limit: 8 * semore,
         },
@@ -149,4 +147,4 @@ const Json = () => {
   );
 };
 
-export default Json;
+export default memo(Json);

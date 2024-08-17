@@ -1,6 +1,5 @@
-import React from 'react'
+import React , {memo} from 'react'
 import "./footer.css"
-import navlogo from "../../assets/nav.png"
 import { FaInstagram } from "react-icons/fa";
 const Footer = () => {
     const footer = ["Все права защищены © 2015 интернет-магазин AIKEA.BY Беларусь.", "УНП 191828159 ИП Парейко В.С., регистрационный номер в торговом реестре 158299", "Политика конфиденциальности"]
@@ -39,4 +38,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export default memo(Footer)

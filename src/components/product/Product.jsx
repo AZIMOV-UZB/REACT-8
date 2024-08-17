@@ -1,6 +1,6 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import React, { useEffect, useState ,memo} from "react";
+import {  useParams } from "react-router-dom";
 import { IoStarOutline } from "react-icons/io5";
 import { LiaCartPlusSolid } from "react-icons/lia";
 import { IoBarChartOutline } from "react-icons/io5";
@@ -9,7 +9,6 @@ const API_URL = "https://dummyjson.com";
 const Product = () => {
   const { id } = useParams();
   const [data, setData] = useState(null);
-  const [cart, setCart] = useState(0);
   const [products, setProducts] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -170,4 +169,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default memo(Product);

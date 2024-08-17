@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import "./header.css";
 import { RiMenu2Fill } from "react-icons/ri";
 import axios from "axios";
@@ -90,4 +90,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header)
